@@ -47,5 +47,5 @@ jekyll serve   # http://localhost:4000
 - **초안 = Obsidian 볼트(비공개) / 발행 = 이 public repo.** 미발행 글은 repo에 올리지 않는다(public이라 미리 노출됨). 확정된 글만 `_posts/`에 push.
 - 댓글 기능 없음 — 1차 반례 채널은 Threads/X 답글·DM.
 - 이메일 수집 = Tally(https://tally.so/r/b5DqZe), 발송은 초기 수동(Gmail BCC)→나중 도구.
-- 화자는 "하영"(person-first), 브랜드 간판은 middl.news.
+- 화자는 실명 비노출 + 1인칭 개인 목소리(person-first), 브랜드 간판은 middl.news.
 - 운영·편집 규율: Obsidian 볼트 `1-Projects/믿을 뉴스/`(컨셉·사안·응대 규율·발행 카피).
