@@ -19,7 +19,9 @@ header.site{padding-top:44px;padding-bottom:8px;}
 main{padding-top:24px;padding-bottom:24px;}
 
 .intro{border-left:3px solid var(--rule);padding-left:16px;margin:8px 0 36px;color:var(--ink);}
-.intro p{margin:0;}
+.intro p{margin:0 0 10px;}
+.intro p:last-child{margin-bottom:0;}
+.intro .lead{font-size:21px;font-weight:700;line-height:1.4;}
 
 .posts h2{font-size:15px;color:var(--muted);font-weight:600;letter-spacing:.02em;margin:0 0 4px;}
 .posts ul{list-style:none;padding:0;margin:0;}
