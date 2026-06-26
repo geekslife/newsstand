@@ -27,15 +27,14 @@ description: "한 줄 요약"
 ```
 커밋 후 push → 자동 발행.
 
-## 배포 (1회 세팅)
-1. GitHub에 repo 생성(예: `middlnews/middlnews.github.io` 또는 임의 repo).
-2. 이 폴더를 push.
-3. repo Settings → Pages → Source: `main` 브랜치 / 루트.
-4. Settings → Pages → Custom domain: `middl.news` 입력(CNAME 파일이 이미 있음).
-5. 도메인 DNS에서 GitHub Pages로 연결:
-   - apex(middl.news): A 레코드 → 185.199.108.153 / .109.153 / .110.153 / .111.153
-   - (선택) www: CNAME → `<user>.github.io`
-6. Pages에서 "Enforce HTTPS" 체크.
+## 배포 현황
+- repo: **geekslife/newsstand** (public), remote=origin(SSH), 브랜치 main ✅ push 완료
+- GitHub Pages: ✅ 활성(main/root), 커스텀 도메인 = middl.news (CNAME)
+- **남은 1단계 — DNS** (도메인 구입처):
+  - apex `@`: A 레코드 → `185.199.108.153` / `.109.153` / `.110.153` / `.111.153`
+  - (선택) `www`: CNAME → `geekslife.github.io`
+  - DNS 전파 후 Settings → Pages → **Enforce HTTPS** 체크
+- 이후 발행: `_posts/`에 Markdown 추가 → `git push` (origin=geekslife/newsstand)
 
 ## 로컬 미리보기(선택)
 ```
@@ -44,6 +43,8 @@ jekyll serve   # http://localhost:4000
 ```
 
 ## 원칙(과설계 금지)
+- **repo는 public**(무료 GitHub Pages 조건). 소스 공개는 투명성과도 맞음 — 단 비밀(키·이메일 리스트) 절대 커밋 금지.
+- **초안 = Obsidian 볼트(비공개) / 발행 = 이 public repo.** 미발행 글은 repo에 올리지 않는다(public이라 미리 노출됨). 확정된 글만 `_posts/`에 push.
 - 댓글 기능 없음 — 1차 반례 채널은 Threads/X 답글·DM.
 - 이메일 수집 = Tally(https://tally.so/r/b5DqZe), 발송은 초기 수동(Gmail BCC)→나중 도구.
 - 화자는 "하영"(person-first), 브랜드 간판은 middl.news.
