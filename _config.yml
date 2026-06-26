@@ -1,0 +1,8 @@
+title: 믿을 뉴스
+description: 판단이 바뀔 조건까지 공개하는 뉴스 실험
+author: 하영
+url: "https://middl.news"
+lang: ko
+
+# 커스텀 레이아웃만 사용(외부 테마 없음). 플러그인 없음 → GitHub Pages 기본 빌드로 동작.
+permalink: /:year/:month/:day/:title/

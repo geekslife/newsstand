@@ -1,0 +1,40 @@
+:root{
+  --ink:#1a1a1a; --muted:#6b6b6b; --rule:#e6e6e6; --link:#0a7d46;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0; color:var(--ink); background:#fff;
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;
+  font-size:18px; line-height:1.75; word-break:keep-all;
+}
+main,header.site,footer.site{max-width:680px;margin:0 auto;padding:0 20px;}
+a{color:var(--link);}
+a:hover{text-decoration:underline;}
+
+header.site{padding-top:44px;padding-bottom:8px;}
+.brand{font-size:24px;font-weight:700;text-decoration:none;color:var(--ink);}
+.tagline{color:var(--muted);margin:4px 0 0;font-size:15px;}
+
+main{padding-top:24px;padding-bottom:24px;}
+
+.intro{border-left:3px solid var(--rule);padding-left:16px;margin:8px 0 36px;color:var(--ink);}
+.intro p{margin:0;}
+
+.posts h2{font-size:15px;color:var(--muted);font-weight:600;letter-spacing:.02em;margin:0 0 4px;}
+.posts ul{list-style:none;padding:0;margin:0;}
+.posts li{padding:14px 0;border-bottom:1px solid var(--rule);}
+.posts li a{font-size:19px;font-weight:600;text-decoration:none;color:var(--ink);}
+.posts li a:hover{color:var(--link);}
+.posts .date{display:block;color:var(--muted);font-size:13px;margin-top:2px;}
+
+.post h1{font-size:28px;line-height:1.3;margin:0 0 6px;}
+.post .meta{color:var(--muted);font-size:14px;margin:0 0 28px;}
+.post p{margin:0 0 18px;}
+.post a{color:var(--link);}
+hr{border:0;border-top:1px solid var(--rule);margin:32px 0;}
+.cta{color:var(--muted);font-size:15px;}
+
+footer.site{border-top:1px solid var(--rule);margin-top:48px;padding-top:20px;padding-bottom:64px;color:var(--muted);font-size:14px;}
+footer.site p{margin:0 0 6px;}
+footer.site a{color:var(--muted);}

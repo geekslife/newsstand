@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="post">
+  <h1>{{ page.title }}</h1>
+  <p class="meta">{{ page.date | date: "%Y-%m-%d" }}{% if page.series %} · {{ page.series }}{% endif %} · 하영</p>
+
+  {{ content }}
+
+  <hr>
+  <p class="cta">제가 놓친 반례·자료가 있으면 <a href="https://www.threads.net/@middl_news">Threads</a>나 <a href="https://x.com/middl_news">X</a> 답글·DM으로 알려주세요. 좋은 건 검토해 사안에 남기고, 원하시면 크레딧을 붙입니다.</p>
+</article>
