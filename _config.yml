@@ -3,6 +3,7 @@ description: 말보다 숫자, 주장보다 흐름. 누가 옳은지 말하지 �
 author: 믿을 뉴스
 url: "https://middl.news"
 lang: ko
+google_analytics: "G-NHH5N2RTJX"
 
 # 커스텀 레이아웃만 사용(외부 테마 없음). 플러그인 없음 → GitHub Pages 기본 빌드로 동작.
 permalink: /:year/:month/:day/:title/
