@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">지방채무, 진영보다 위기가 움직였다</title>
-  <desc id="desc">7개 광역단체의 2016년부터 2024년 자료에서 지역 특성을 통제한 명목 채무 증가율 변화 추정치. 코로나19는 19.9퍼센트포인트, 민주계 재임은 4.1퍼센트포인트, 지방세 증가율 하락은 2.2퍼센트포인트, 자본시설지출 증가는 1.2퍼센트포인트다. 선은 95퍼센트 불확실성 범위다.</desc>
+  <title id="title">지방채무를 더 크게 움직인 것은 진영보다 위기였습니다</title>
+  <desc id="desc">7개 광역단체의 2016년부터 2024년 자료에서 지역 특성을 통제한 명목 채무 증가율 변화 추정치입니다. 코로나19는 19.9퍼센트포인트, 민주계 재임은 4.1퍼센트포인트, 지방세 증가율 하락은 2.2퍼센트포인트, 자본시설지출 증가는 1.2퍼센트포인트입니다. 선은 95퍼센트 불확실성 범위입니다.</desc>
   <rect width="1200" height="630" fill="#fff"/>
   <g font-family="-apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Pretendard, Malgun Gothic, sans-serif" fill="#1a1a1a">
-    <text x="60" y="70" font-size="46" font-weight="700">지방채무, 진영보다 위기가 움직였다</text>
+    <text x="60" y="70" font-size="43" font-weight="700">지방채무를 더 크게 움직인 것은 진영보다 위기였습니다</text>
     <text x="60" y="112" font-size="23" fill="#6b6b6b">7개 광역단체 · 2016–2024 · 지역 특성 통제</text>
 
     <rect x="340" y="155" width="790" height="355" fill="none" stroke="#dededb" stroke-width="2"/>
