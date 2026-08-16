@@ -1,6 +1,6 @@
 # middl.news (믿을 뉴스)
 
-말은 시끄럽고, 판은 조용히 움직입니다 — 판세를 지켜보는 1인 뉴스 실험. GitHub Pages + Jekyll(빌드 액션 불필요).
+말보다 숫자, 주장보다 흐름 — 판세를 지켜보는 1인 뉴스 실험. GitHub Pages + Jekyll(빌드 액션 불필요).
 
 ## 구조
 ```
@@ -8,7 +8,7 @@ _config.yml            사이트 설정
 CNAME                  커스텀 도메인(middl.news)
 index.html             홈(사안 목록)
 _layouts/default.html  공통 레이아웃(헤더·푸터·구독 링크)
-_layouts/post.html     글 레이아웃(반례 CTA 포함)
+_layouts/post.html     글 레이아웃(수치·자료 제보 CTA 포함)
 _posts/                글(Markdown). 파일명: YYYY-MM-DD-slug.md
 assets/style.css       스타일(읽기 최적화, JS 없음)
 ```
@@ -45,7 +45,7 @@ jekyll serve   # http://localhost:4000
 ## 원칙(과설계 금지)
 - **repo는 public**(무료 GitHub Pages 조건). 소스 공개는 투명성과도 맞음 — 단 비밀(키·이메일 리스트) 절대 커밋 금지.
 - **초안 = Obsidian 볼트(비공개) / 발행 = 이 public repo.** 미발행 글은 repo에 올리지 않는다(public이라 미리 노출됨). 확정된 글만 `_posts/`에 push.
-- 댓글 기능 없음 — 1차 반례 채널은 Threads/X 답글·DM.
+- 댓글 기능 없음 — 수치 오류·자료 제보 채널은 Threads/X 답글·DM.
 - 이메일 수집 = Tally(https://tally.so/r/b5DqZe), 발송은 초기 수동(Gmail BCC)→나중 도구.
 - 화자는 실명 비노출 + 1인칭 개인 목소리(person-first), 브랜드 간판은 middl.news.
 - 운영·편집 규율: Obsidian 볼트 `1-Projects/믿을 뉴스/`(컨셉·사안·응대 규율·발행 카피).
