@@ -11,6 +11,7 @@ body{
 main,header.site,footer.site{max-width:680px;margin:0 auto;padding:0 20px;}
 a{color:var(--link);}
 a:hover{text-decoration:underline;}
+img{display:block;max-width:100%;height:auto;}
 
 header.site{padding-top:44px;padding-bottom:8px;}
 .brand{font-size:24px;font-weight:700;text-decoration:none;color:var(--ink);}
@@ -34,6 +35,10 @@ main{padding-top:24px;padding-bottom:24px;}
 .post .meta{color:var(--muted);font-size:14px;margin:0 0 28px;}
 .post p{margin:0 0 18px;}
 .post a{color:var(--link);}
+.post blockquote{margin:0 0 28px;padding:14px 16px;border-left:3px solid var(--ink);background:#f7f7f5;}
+.post blockquote p{margin:0;color:#3f3f3f;font-size:16px;}
+.post img{margin:28px 0 8px;}
+.post .caption{margin:-2px 0 28px;color:var(--muted);font-size:13px;line-height:1.5;}
 hr{border:0;border-top:1px solid var(--rule);margin:32px 0;}
 .cta{color:var(--muted);font-size:15px;}
 
