@@ -6,3 +6,9 @@ lang: ko
 
 # 커스텀 레이아웃만 사용(외부 테마 없음). 플러그인 없음 → GitHub Pages 기본 빌드로 동작.
 permalink: /:year/:month/:day/:title/
+
+# URL을 아는 사람만 보는 공개 미리보기. site.posts에 포함되지 않아 홈 목록에는 노출되지 않는다.
+collections:
+  previews:
+    output: true
+    permalink: /preview/:name/
