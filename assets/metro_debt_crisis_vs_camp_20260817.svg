@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">두 위기 추정치는 진영보다 컸습니다</title>
+  <desc id="desc">7개 광역단체의 2005년부터 2024년 자료에서 지역과 선형 추세를 통제한 명목 채무 증가율 변화 추정치입니다. 금융위기 대응기는 16.3퍼센트포인트, 코로나 대응기는 16.0퍼센트포인트, 민주계 재임은 0.4퍼센트포인트입니다. 선은 95퍼센트 불확실성 범위입니다.</desc>
+  <rect width="1200" height="630" fill="#fff"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Pretendard, Malgun Gothic, sans-serif" fill="#1a1a1a">
+    <text x="60" y="70" font-size="43" font-weight="700">두 위기 추정치는 진영보다 컸습니다</text>
+    <text x="60" y="112" font-size="23" fill="#6b6b6b">7개 광역단체 · 2005–2024 · 지역·선형 추세 통제</text>
+
+    <rect x="360" y="155" width="760" height="340" fill="none" stroke="#dededb" stroke-width="2"/>
+    <g stroke="#e6e6e6" stroke-width="2">
+      <line x1="360" y1="155" x2="360" y2="495"/>
+      <line x1="698" y1="155" x2="698" y2="495"/>
+      <line x1="867" y1="155" x2="867" y2="495"/>
+      <line x1="1036" y1="155" x2="1036" y2="495"/>
+    </g>
+    <line x1="529" y1="155" x2="529" y2="495" stroke="#1a1a1a" stroke-width="3"/>
+
+    <g font-size="25">
+      <text x="330" y="229" text-anchor="end" font-weight="700">금융위기 대응기</text>
+      <text x="330" y="339" text-anchor="end" font-weight="700">코로나 대응기</text>
+      <text x="330" y="449" text-anchor="end">민주계 재임</text>
+    </g>
+    <g font-size="19" fill="#6b6b6b" text-anchor="end">
+      <text x="330" y="257">2009–2010</text>
+      <text x="330" y="367">2020–2021</text>
+    </g>
+
+    <g fill="none" stroke-linecap="round">
+      <line x1="528" y1="220" x2="1081" y2="220" stroke="#d77b34" stroke-width="10"/>
+      <line x1="746" y1="330" x2="850" y2="330" stroke="#0a7d46" stroke-width="10"/>
+      <line x1="397" y1="440" x2="676" y2="440" stroke="#747474" stroke-width="7"/>
+    </g>
+    <g stroke-width="3">
+      <g stroke="#d77b34"><line x1="528" y1="207" x2="528" y2="233"/><line x1="1081" y1="207" x2="1081" y2="233"/></g>
+      <g stroke="#0a7d46"><line x1="746" y1="317" x2="746" y2="343"/><line x1="850" y1="317" x2="850" y2="343"/></g>
+      <g stroke="#747474"><line x1="397" y1="428" x2="397" y2="452"/><line x1="676" y1="428" x2="676" y2="452"/></g>
+    </g>
+    <circle cx="804" cy="220" r="13" fill="#d77b34"/>
+    <circle cx="799" cy="330" r="13" fill="#0a7d46"/>
+    <circle cx="536" cy="440" r="11" fill="#1a1a1a"/>
+
+    <g font-size="24" font-weight="700">
+      <text x="826" y="199" fill="#b45f20">+16.3</text>
+      <text x="821" y="309" fill="#08683b">+16.0</text>
+      <text x="558" y="419">+0.4</text>
+    </g>
+
+    <g font-size="20" fill="#4f4f4f" text-anchor="middle">
+      <text x="360" y="528">−10</text>
+      <text x="529" y="528">0</text>
+      <text x="698" y="528">+10</text>
+      <text x="867" y="528">+20</text>
+      <text x="1036" y="528">+30</text>
+    </g>
+    <text x="740" y="570" font-size="21" text-anchor="middle">명목 채무 증가율 변화(%p)</text>
+    <text x="60" y="610" font-size="18" fill="#6b6b6b">점은 추정치, 선은 95% 불확실성 범위 · 인과효과가 아닌 관측된 연관성</text>
+  </g>
+</svg>
