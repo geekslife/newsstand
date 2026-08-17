@@ -1,63 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">지방채무를 더 크게 움직인 것은 진영보다 위기였습니다</title>
-  <desc id="desc">7개 광역단체의 2016년부터 2024년 자료에서 지역 특성을 통제한 명목 채무 증가율 변화 추정치입니다. 코로나19는 19.9퍼센트포인트, 민주계 재임은 4.1퍼센트포인트, 지방세 증가율 하락은 2.2퍼센트포인트, 자본시설지출 증가는 1.2퍼센트포인트입니다. 선은 95퍼센트 불확실성 범위입니다.</desc>
+  <title id="title">20년 본청 자료, 위기 충격이 진영보다 컸습니다</title>
+  <desc id="desc">7개 광역단체 본청의 2005년부터 2024년 자료에서 지역과 선형 추세를 통제한 명목 채무 증가율 변화 추정치입니다. 코로나 대응기는 22.6퍼센트포인트, 금융위기 대응기는 15.3퍼센트포인트, 지방세 증가율 하락 1표준편차는 2.8퍼센트포인트, 민주계 재임은 1.0퍼센트포인트, 자본지출 비중 상승 1표준편차는 0.5퍼센트포인트입니다. 선은 95퍼센트 불확실성 범위입니다.</desc>
   <rect width="1200" height="630" fill="#fff"/>
   <g font-family="-apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Pretendard, Malgun Gothic, sans-serif" fill="#1a1a1a">
-    <text x="60" y="70" font-size="43" font-weight="700">지방채무를 더 크게 움직인 것은 진영보다 위기였습니다</text>
-    <text x="60" y="112" font-size="23" fill="#6b6b6b">7개 광역단체 · 2016–2024 · 지역 특성 통제</text>
+    <text x="60" y="68" font-size="41" font-weight="700">20년 본청 자료, 위기 충격이 진영보다 컸습니다</text>
+    <text x="60" y="108" font-size="22" fill="#6b6b6b">7개 광역단체 본청 · 2005–2024 · 지역·선형 추세 통제</text>
 
-    <rect x="340" y="155" width="790" height="355" fill="none" stroke="#dededb" stroke-width="2"/>
+    <rect x="360" y="142" width="770" height="360" fill="none" stroke="#dededb" stroke-width="2"/>
     <g stroke="#e6e6e6" stroke-width="2">
-      <line x1="419" y1="155" x2="419" y2="510"/>
-      <line x1="735" y1="155" x2="735" y2="510"/>
-      <line x1="893" y1="155" x2="893" y2="510"/>
-      <line x1="1051" y1="155" x2="1051" y2="510"/>
+      <line x1="360" y1="142" x2="360" y2="502"/>
+      <line x1="668" y1="142" x2="668" y2="502"/>
+      <line x1="822" y1="142" x2="822" y2="502"/>
+      <line x1="976" y1="142" x2="976" y2="502"/>
+      <line x1="1130" y1="142" x2="1130" y2="502"/>
     </g>
-    <line x1="577" y1="155" x2="577" y2="510" stroke="#1a1a1a" stroke-width="3"/>
+    <line x1="514" y1="142" x2="514" y2="502" stroke="#1a1a1a" stroke-width="3"/>
 
-    <g font-size="25">
-      <text x="315" y="224" text-anchor="end" font-weight="700">코로나19</text>
-      <text x="315" y="309" text-anchor="end">민주계 재임</text>
-      <text x="315" y="394" text-anchor="end">지방세 증가율↓</text>
-      <text x="315" y="479" text-anchor="end">자본시설지출↑</text>
+    <g font-size="23">
+      <text x="330" y="194" text-anchor="end" font-weight="700">코로나 대응기</text>
+      <text x="330" y="264" text-anchor="end" font-weight="700">금융위기 대응기</text>
+      <text x="330" y="334" text-anchor="end">지방세 증가율↓</text>
+      <text x="330" y="404" text-anchor="end">민주계 재임</text>
+      <text x="330" y="474" text-anchor="end">자본지출 비중↑</text>
+    </g>
+    <g font-size="17" fill="#6b6b6b" text-anchor="end">
+      <text x="330" y="215">2020–2021</text>
+      <text x="330" y="285">2009–2010</text>
     </g>
 
     <g fill="none" stroke-linecap="round">
-      <line x1="741" y1="215" x2="1042" y2="215" stroke="#0a7d46" stroke-width="12"/>
-      <line x1="373" y1="300" x2="909" y2="300" stroke="#747474" stroke-width="7"/>
-      <line x1="504" y1="385" x2="718" y2="385" stroke="#747474" stroke-width="7"/>
-      <line x1="459" y1="470" x2="733" y2="470" stroke="#747474" stroke-width="7"/>
+      <line x1="637" y1="185" x2="1086" y2="185" stroke="#0a7d46" stroke-width="11"/>
+      <line x1="500" y1="255" x2="1000" y2="255" stroke="#d77b34" stroke-width="10"/>
+      <line x1="469" y1="325" x2="645" y2="325" stroke="#747474" stroke-width="7"/>
+      <line x1="412" y1="395" x2="647" y2="395" stroke="#747474" stroke-width="7"/>
+      <line x1="409" y1="465" x2="634" y2="465" stroke="#747474" stroke-width="7"/>
     </g>
     <g stroke-width="3">
-      <g stroke="#0a7d46">
-        <line x1="741" y1="201" x2="741" y2="229"/><line x1="1042" y1="201" x2="1042" y2="229"/>
-      </g>
+      <g stroke="#0a7d46"><line x1="637" y1="173" x2="637" y2="197"/><line x1="1086" y1="173" x2="1086" y2="197"/></g>
+      <g stroke="#d77b34"><line x1="500" y1="243" x2="500" y2="267"/><line x1="1000" y1="243" x2="1000" y2="267"/></g>
       <g stroke="#747474">
-        <line x1="373" y1="288" x2="373" y2="312"/><line x1="909" y1="288" x2="909" y2="312"/>
-        <line x1="504" y1="373" x2="504" y2="397"/><line x1="718" y1="373" x2="718" y2="397"/>
-        <line x1="459" y1="458" x2="459" y2="482"/><line x1="733" y1="458" x2="733" y2="482"/>
+        <line x1="469" y1="313" x2="469" y2="337"/><line x1="645" y1="313" x2="645" y2="337"/>
+        <line x1="412" y1="383" x2="412" y2="407"/><line x1="647" y1="383" x2="647" y2="407"/>
+        <line x1="409" y1="453" x2="409" y2="477"/><line x1="634" y1="453" x2="634" y2="477"/>
       </g>
     </g>
-    <circle cx="891" cy="215" r="13" fill="#0a7d46"/>
-    <circle cx="642" cy="300" r="11" fill="#1a1a1a"/>
-    <circle cx="612" cy="385" r="11" fill="#1a1a1a"/>
-    <circle cx="596" cy="470" r="11" fill="#1a1a1a"/>
+    <circle cx="861" cy="185" r="13" fill="#0a7d46"/>
+    <circle cx="750" cy="255" r="13" fill="#d77b34"/>
+    <circle cx="557" cy="325" r="10" fill="#1a1a1a"/>
+    <circle cx="529" cy="395" r="10" fill="#1a1a1a"/>
+    <circle cx="522" cy="465" r="10" fill="#1a1a1a"/>
 
-    <g font-size="23" font-weight="700">
-      <text x="913" y="194">+19.9</text>
-      <text x="662" y="279">+4.1</text>
-      <text x="632" y="364">+2.2</text>
-      <text x="616" y="449">+1.2</text>
+    <g font-size="22" font-weight="700">
+      <text x="882" y="169" fill="#08683b">+22.6</text>
+      <text x="771" y="239" fill="#b45f20">+15.3</text>
+      <text x="578" y="309">+2.8</text>
+      <text x="550" y="379">+1.0</text>
+      <text x="543" y="449">+0.5</text>
     </g>
 
-    <g font-size="20" fill="#4f4f4f" text-anchor="middle">
-      <text x="419" y="541">−10</text>
-      <text x="577" y="541">0</text>
-      <text x="735" y="541">+10</text>
-      <text x="893" y="541">+20</text>
-      <text x="1051" y="541">+30</text>
+    <g font-size="19" fill="#4f4f4f" text-anchor="middle">
+      <text x="360" y="533">−10</text>
+      <text x="514" y="533">0</text>
+      <text x="668" y="533">+10</text>
+      <text x="822" y="533">+20</text>
+      <text x="976" y="533">+30</text>
+      <text x="1130" y="533">+40</text>
     </g>
-    <text x="735" y="580" font-size="21" text-anchor="middle">명목 채무 증가율 변화(%p)</text>
-    <text x="60" y="615" font-size="18" fill="#6b6b6b">점은 추정치, 선은 95% 불확실성 범위 · 연속 지표는 1표준편차 변화 기준</text>
+    <text x="745" y="570" font-size="20" text-anchor="middle">명목 채무 증가율 변화(%p)</text>
+    <text x="60" y="610" font-size="17" fill="#6b6b6b">점은 추정치, 선은 95% 불확실성 범위 · 세수·자본지출은 각각 1표준편차 변화 기준</text>
   </g>
 </svg>

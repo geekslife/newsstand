@@ -1,0 +1,579 @@
+{
+  "source": {
+    "name": "행정안전부 지방재정365 공개 API",
+    "coverage": "7개 광역단체 본청, 2004~2024년 결산",
+    "debt": "https://www.lofin365.go.kr/lf/hub/ACCAM",
+    "revenue": "https://www.lofin365.go.kr/lf/hub/FIACRV",
+    "expenditure": "https://www.lofin365.go.kr/lf/hub/SDSCF"
+  },
+  "definitions": {
+    "analysis_years": "2005~2024 (2004 year-end balance is the growth base)",
+    "debt": "회계별 지방채 잔액 네 계정의 합계",
+    "revenue": "재원별 회계별 세입결산 순계합계",
+    "local_tax": "재원별 회계별 세입결산 지방세수입 순계",
+    "capital_outlay": "성질별 단체별 세출결산 4xxxx 항목 합계",
+    "tax_slowdown_z": "지방세 증가율 하락 1표준편차",
+    "capital_share_z": "성질별 분류 세출 중 자본지출 비중 상승 1표준편차",
+    "gfc": "2009~2010",
+    "covid": "2020~2021"
+  },
+  "scales": {
+    "tax_slowdown_one_sd_pp": 7.945999665521909,
+    "capital_share_one_sd_pp": 7.642579160714677
+  },
+  "descriptive": {
+    "party_current": {
+      "n": 138,
+      "n_democratic": 51,
+      "n_conservative": 87,
+      "democratic_mean": 7.400730403838493,
+      "conservative_mean": 3.6452129841347047,
+      "gap_democratic_minus_conservative": 3.755517419703788,
+      "democratic_median": 0.2635914332784095,
+      "conservative_median": 0.08053496515465497
+    },
+    "party_lagged": {
+      "n": 138,
+      "n_democratic": 50,
+      "n_conservative": 88,
+      "democratic_mean": 8.941201705108138,
+      "conservative_mean": 2.793579081350578,
+      "gap_democratic_minus_conservative": 6.14762262375756,
+      "democratic_median": 2.4253933236009884,
+      "conservative_median": -0.3473899443446504
+    },
+    "period_means": {
+      "ordinary": {
+        "n": 112,
+        "mean_debt_growth_pct": 1.3862575357077822,
+        "median_debt_growth_pct": -0.9262280642433285
+      },
+      "gfc_2009_2010": {
+        "n": 14,
+        "mean_debt_growth_pct": 16.07172795244119,
+        "median_debt_growth_pct": 10.7179737588753
+      },
+      "covid_2020_2021": {
+        "n": 14,
+        "mean_debt_growth_pct": 22.500399140713416,
+        "median_debt_growth_pct": 15.116401990190086
+      }
+    },
+    "first_decade_current": {
+      "n": 69,
+      "n_democratic": 15,
+      "n_conservative": 54,
+      "democratic_mean": 3.523999260855543,
+      "conservative_mean": 4.6352109828713575,
+      "gap_democratic_minus_conservative": -1.1112117220158146,
+      "democratic_median": -1.6755706653715396,
+      "conservative_median": 0.5210589016468425
+    },
+    "second_decade_current": {
+      "n": 69,
+      "n_democratic": 36,
+      "n_conservative": 33,
+      "democratic_mean": 9.016035046748053,
+      "conservative_mean": 2.025216258929277,
+      "gap_democratic_minus_conservative": 6.990818787818776,
+      "democratic_median": 5.688421087840567,
+      "conservative_median": -0.3943507041399452
+    }
+  },
+  "models": {
+    "crises_and_party_current": {
+      "n": 138,
+      "k": 11,
+      "outcome": "debt_growth_pct",
+      "predictors": [
+        "gfc",
+        "covid",
+        "democratic"
+      ],
+      "city_fe": true,
+      "year_fe": false,
+      "linear_trend": true,
+      "sse": 33047.67881176727,
+      "estimates": {
+        "gfc": {
+          "estimate": 15.40235204084583,
+          "cluster_se": 6.827040832784324,
+          "ci95_t6": [
+            -1.3028160973841274,
+            32.10752017907579
+          ]
+        },
+        "covid": {
+          "estimate": 20.457397001399364,
+          "cluster_se": 5.185619806453738,
+          "ci95_t6": [
+            7.768641669550034,
+            33.14615233324869
+          ]
+        },
+        "democratic": {
+          "estimate": 0.15323168758831912,
+          "cluster_se": 3.23635685388131,
+          "ci95_t6": [
+            -7.765848734456105,
+            8.072312109632744
+          ]
+        }
+      }
+    },
+    "crises_and_party_gfc_2008_2010": {
+      "n": 138,
+      "k": 11,
+      "outcome": "debt_growth_pct",
+      "predictors": [
+        "gfc_2008_2010",
+        "covid",
+        "democratic"
+      ],
+      "city_fe": true,
+      "year_fe": false,
+      "linear_trend": true,
+      "sse": 33991.937146958764,
+      "estimates": {
+        "gfc_2008_2010": {
+          "estimate": 10.951323262001429,
+          "cluster_se": 4.959859338522362,
+          "ci95_t6": [
+            -1.1850160717410017,
+            23.087662595743858
+          ]
+        },
+        "covid": {
+          "estimate": 20.28661039736754,
+          "cluster_se": 5.164199588713154,
+          "ci95_t6": [
+            7.650268453350257,
+            32.92295234138482
+          ]
+        },
+        "democratic": {
+          "estimate": 0.11142278655170512,
+          "cluster_se": 3.2565243934962917,
+          "ci95_t6": [
+            -7.857005830187094,
+            8.079851403290505
+          ]
+        }
+      }
+    },
+    "drivers_current": {
+      "n": 138,
+      "k": 13,
+      "outcome": "debt_growth_pct",
+      "predictors": [
+        "gfc",
+        "covid",
+        "tax_slowdown_z",
+        "capital_share_z",
+        "democratic"
+      ],
+      "city_fe": true,
+      "year_fe": false,
+      "linear_trend": true,
+      "sse": 32050.96854697501,
+      "estimates": {
+        "gfc": {
+          "estimate": 15.31844627248858,
+          "cluster_se": 6.630250848718444,
+          "ci95_t6": [
+            -0.9051940922507651,
+            31.542086637227925
+          ]
+        },
+        "covid": {
+          "estimate": 22.561340538746634,
+          "cluster_se": 5.95482121475736,
+          "ci95_t6": [
+            7.990417050502272,
+            37.132264026990995
+          ]
+        },
+        "tax_slowdown_z": {
+          "estimate": 2.8000991679134346,
+          "cluster_se": 2.32846193362284,
+          "ci95_t6": [
+            -2.8974422790114964,
+            8.497640614838366
+          ]
+        },
+        "capital_share_z": {
+          "estimate": 0.4921986322454379,
+          "cluster_se": 2.980916177257552,
+          "ci95_t6": [
+            -6.801840932880193,
+            7.78623819737107
+          ]
+        },
+        "democratic": {
+          "estimate": 0.9999070269217382,
+          "cluster_se": 3.1188939930889163,
+          "ci95_t6": [
+            -6.631752111495449,
+            8.631566165338926
+          ]
+        }
+      }
+    },
+    "drivers_lagged": {
+      "n": 138,
+      "k": 13,
+      "outcome": "debt_growth_pct",
+      "predictors": [
+        "gfc",
+        "covid",
+        "tax_slowdown_z",
+        "capital_share_z",
+        "democratic"
+      ],
+      "city_fe": true,
+      "year_fe": false,
+      "linear_trend": true,
+      "sse": 31925.257655349982,
+      "estimates": {
+        "gfc": {
+          "estimate": 15.550376194332932,
+          "cluster_se": 6.747489911634296,
+          "ci95_t6": [
+            -0.9601378403239682,
+            32.060890228989834
+          ]
+        },
+        "covid": {
+          "estimate": 22.270537765954696,
+          "cluster_se": 5.58019869895333,
+          "ci95_t6": [
+            8.616282607101404,
+            35.92479292480799
+          ]
+        },
+        "tax_slowdown_z": {
+          "estimate": 2.9290252008914313,
+          "cluster_se": 2.3402774167696725,
+          "ci95_t6": [
+            -2.7974276935312816,
+            8.655478095314145
+          ]
+        },
+        "capital_share_z": {
+          "estimate": 0.7608699282487692,
+          "cluster_se": 2.8494296039900853,
+          "ci95_t6": [
+            -6.211433562909819,
+            7.733173419407357
+          ]
+        },
+        "democratic": {
+          "estimate": 3.2492398889337206,
+          "cluster_se": 3.4330035832340267,
+          "ci95_t6": [
+            -5.151017774924618,
+            11.64949755279206
+          ]
+        }
+      }
+    },
+    "drivers_log_growth_current": {
+      "n": 138,
+      "k": 13,
+      "outcome": "debt_log_growth_pct",
+      "predictors": [
+        "gfc",
+        "covid",
+        "tax_slowdown_z",
+        "capital_share_z",
+        "democratic"
+      ],
+      "city_fe": true,
+      "year_fe": false,
+      "linear_trend": true,
+      "sse": 19886.495080700166,
+      "estimates": {
+        "gfc": {
+          "estimate": 12.378369345477783,
+          "cluster_se": 5.053470607068685,
+          "ci95_t6": [
+            0.01297147539413146,
+            24.743767215561434
+          ]
+        },
+        "covid": {
+          "estimate": 18.1482563048663,
+          "cluster_se": 3.500688746519999,
+          "ci95_t6": [
+            9.582379002741556,
+            26.714133606991048
+          ]
+        },
+        "tax_slowdown_z": {
+          "estimate": 2.270556344337383,
+          "cluster_se": 1.61773624416265,
+          "ci95_t6": [
+            -1.6879018843391353,
+            6.2290145730139015
+          ]
+        },
+        "capital_share_z": {
+          "estimate": 1.528537088353222,
+          "cluster_se": 2.262244781255414,
+          "ci95_t6": [
+            -4.006976813838026,
+            7.0640509905444695
+          ]
+        },
+        "democratic": {
+          "estimate": 0.2355587565609903,
+          "cluster_se": 2.8604523450065864,
+          "ci95_t6": [
+            -6.763716411863767,
+            7.234833924985747
+          ]
+        }
+      }
+    },
+    "burden_change_current": {
+      "n": 138,
+      "k": 13,
+      "outcome": "debt_to_revenue_change_pp",
+      "predictors": [
+        "gfc",
+        "covid",
+        "tax_slowdown_z",
+        "capital_share_z",
+        "democratic"
+      ],
+      "city_fe": true,
+      "year_fe": false,
+      "linear_trend": true,
+      "sse": 883.6450579835904,
+      "estimates": {
+        "gfc": {
+          "estimate": 3.3384580939709125,
+          "cluster_se": 0.9813838158411127,
+          "ci95_t6": [
+            0.9370982583835037,
+            5.739817929558321
+          ]
+        },
+        "covid": {
+          "estimate": 2.1673051404600767,
+          "cluster_se": 0.593461961871658,
+          "ci95_t6": [
+            0.7151559444127742,
+            3.6194543365073795
+          ]
+        },
+        "tax_slowdown_z": {
+          "estimate": 0.7121887497529497,
+          "cluster_se": 0.31105399650472804,
+          "ci95_t6": [
+            -0.048933006942427526,
+            1.473310506448327
+          ]
+        },
+        "capital_share_z": {
+          "estimate": 0.7239211234149003,
+          "cluster_se": 0.6601901156153785,
+          "ci95_t6": [
+            -0.8915059927657569,
+            2.339348239595558
+          ]
+        },
+        "democratic": {
+          "estimate": 0.030025795776643216,
+          "cluster_se": 0.354457377266078,
+          "ci95_t6": [
+            -0.8373002141442504,
+            0.8973518056975368
+          ]
+        }
+      }
+    },
+    "party_year_fe_current": {
+      "n": 138,
+      "k": 27,
+      "outcome": "debt_growth_pct",
+      "predictors": [
+        "democratic"
+      ],
+      "city_fe": true,
+      "year_fe": true,
+      "linear_trend": false,
+      "sse": 29319.19492001259,
+      "estimates": {
+        "democratic": {
+          "estimate": 3.5059283813394253,
+          "cluster_se": 5.255652506102371,
+          "ci95_t6": [
+            -9.354190803672541,
+            16.36604756635139
+          ]
+        }
+      }
+    },
+    "party_year_fe_lagged": {
+      "n": 138,
+      "k": 27,
+      "outcome": "debt_growth_pct",
+      "predictors": [
+        "democratic"
+      ],
+      "city_fe": true,
+      "year_fe": true,
+      "linear_trend": false,
+      "sse": 29188.95928128899,
+      "estimates": {
+        "democratic": {
+          "estimate": 3.4272186039242687,
+          "cluster_se": 4.215521707340532,
+          "ci95_t6": [
+            -6.887792048027768,
+            13.742229255876305
+          ]
+        }
+      }
+    },
+    "drivers_year_fe_current": {
+      "n": 138,
+      "k": 29,
+      "outcome": "debt_growth_pct",
+      "predictors": [
+        "tax_slowdown_z",
+        "capital_share_z",
+        "democratic"
+      ],
+      "city_fe": true,
+      "year_fe": true,
+      "linear_trend": false,
+      "sse": 29053.589089343892,
+      "estimates": {
+        "tax_slowdown_z": {
+          "estimate": 2.3269693688600093,
+          "cluster_se": 2.582385622748551,
+          "ci95_t6": [
+            -3.991901000070893,
+            8.645839737790912
+          ]
+        },
+        "capital_share_z": {
+          "estimate": 1.0174946862224863,
+          "cluster_se": 3.0911131220411794,
+          "ci95_t6": [
+            -6.546187105457541,
+            8.581176477902513
+          ]
+        },
+        "democratic": {
+          "estimate": 3.695020248020689,
+          "cluster_se": 5.366483349705722,
+          "ci95_t6": [
+            -9.43629225817444,
+            16.826332754215816
+          ]
+        }
+      }
+    }
+  },
+  "diagnostics": {
+    "incremental_sse_debt_growth": {
+      "sse_drop_if_added_last": {
+        "gfc": 2458.5630427584765,
+        "covid": 4868.511588356254,
+        "tax_slowdown_z": 985.8951253525956,
+        "capital_share_z": 8.905774637947616,
+        "democratic": 15.123081794921745
+      },
+      "share_of_summed_sse_drops_pct": {
+        "gfc": 29.48978591593186,
+        "covid": 58.39645434057045,
+        "tax_slowdown_z": 11.825540234912332,
+        "capital_share_z": 0.1068223116190439,
+        "democratic": 0.18139719696631773
+      },
+      "note": "Correlated predictors make these order-free last-added shares descriptive, not causal."
+    },
+    "leave_one_city_out_debt_growth": {
+      "gfc": {
+        "by_omitted_city": {
+          "서울": 10.077083508918278,
+          "경기": 12.551666698477185,
+          "부산": 16.17526005224103,
+          "대구": 16.265215161499448,
+          "광주": 18.384270037583775,
+          "대전": 14.662279063328482,
+          "울산": 18.108176202542865
+        },
+        "range": [
+          10.077083508918278,
+          18.384270037583775
+        ]
+      },
+      "covid": {
+        "by_omitted_city": {
+          "서울": 21.20939220353251,
+          "경기": 17.180032486734184,
+          "부산": 23.52243797294705,
+          "대구": 23.044324101023783,
+          "광주": 24.530236799862596,
+          "대전": 23.3754037099188,
+          "울산": 24.48195168114925
+        },
+        "range": [
+          17.180032486734184,
+          24.530236799862596
+        ]
+      },
+      "tax_slowdown_z": {
+        "by_omitted_city": {
+          "서울": 0.6150018268593901,
+          "경기": 3.7474449431930403,
+          "부산": 3.1605924123352143,
+          "대구": 2.8948256835819626,
+          "광주": 3.123942820171133,
+          "대전": 2.9717360557219994,
+          "울산": 3.0718356498909287
+        },
+        "range": [
+          0.6150018268593901,
+          3.7474449431930403
+        ]
+      },
+      "capital_share_z": {
+        "by_omitted_city": {
+          "서울": -0.5776523199767867,
+          "경기": 3.2034001682550737,
+          "부산": 0.8234650553079899,
+          "대구": -0.35084490152848136,
+          "광주": 0.2986037553135257,
+          "대전": 1.3554382854401466,
+          "울산": -0.6512813690938937
+        },
+        "range": [
+          -0.6512813690938937,
+          3.2034001682550737
+        ]
+      },
+      "democratic": {
+        "by_omitted_city": {
+          "서울": -0.688253382410474,
+          "경기": 0.6465152445575434,
+          "부산": 0.9067601936874599,
+          "대구": 1.0067649903820295,
+          "광주": 1.7711061205860195,
+          "대전": 3.3800510745592485,
+          "울산": -0.26894185451288743
+        },
+        "range": [
+          -0.688253382410474,
+          3.3800510745592485
+        ]
+      }
+    },
+    "wild_cluster_party_current_p": 0.671875,
+    "wild_cluster_party_lagged_p": 0.640625
+  }
+}

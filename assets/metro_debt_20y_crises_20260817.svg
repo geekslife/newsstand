@@ -1,36 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">20년 중 두 위기 때 지방채무 증가율이 함께 뛰었습니다</title>
-  <desc id="desc">서울, 경기와 5대 광역시의 연평균 채무 증가율은 일반 연도 1.5퍼센트, 금융위기 대응기인 2009년과 2010년 16.8퍼센트, 코로나 대응기인 2020년과 2021년 18.8퍼센트였습니다.</desc>
+  <desc id="desc">서울, 경기와 5대 광역시 본청의 연평균 채무 증가율은 일반 연도 1.4퍼센트, 금융위기 대응기인 2009년과 2010년 16.1퍼센트, 코로나 대응기인 2020년과 2021년 22.5퍼센트였습니다.</desc>
   <rect width="1200" height="630" fill="#fff"/>
   <g font-family="-apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Pretendard, Malgun Gothic, sans-serif" fill="#1a1a1a">
     <text x="60" y="72" font-size="43" font-weight="700">20년 중 두 위기 때 채무 증가율이 함께 뛰었습니다</text>
-    <text x="60" y="114" font-size="23" fill="#6b6b6b">7개 광역단체 · 연도별 명목 채무 증가율 단순 평균</text>
+    <text x="60" y="114" font-size="23" fill="#6b6b6b">7개 광역단체 본청 · 연도별 명목 채무 증가율 단순 평균</text>
 
     <g stroke="#e6e6e6" stroke-width="2">
       <line x1="175" y1="472" x2="1100" y2="472"/>
-      <line x1="175" y1="387" x2="1100" y2="387"/>
-      <line x1="175" y1="302" x2="1100" y2="302"/>
-      <line x1="175" y1="217" x2="1100" y2="217"/>
+      <line x1="175" y1="404" x2="1100" y2="404"/>
+      <line x1="175" y1="336" x2="1100" y2="336"/>
+      <line x1="175" y1="268" x2="1100" y2="268"/>
+      <line x1="175" y1="200" x2="1100" y2="200"/>
       <line x1="175" y1="132" x2="1100" y2="132"/>
     </g>
     <line x1="175" y1="472" x2="1100" y2="472" stroke="#1a1a1a" stroke-width="3"/>
 
     <g font-size="19" fill="#5d5d5d" text-anchor="end">
       <text x="158" y="479">0</text>
-      <text x="158" y="394">5</text>
-      <text x="158" y="309">10</text>
-      <text x="158" y="224">15</text>
-      <text x="158" y="139">20%</text>
+      <text x="158" y="411">5</text>
+      <text x="158" y="343">10</text>
+      <text x="158" y="275">15</text>
+      <text x="158" y="207">20</text>
+      <text x="158" y="139">25%</text>
     </g>
 
-    <rect x="250" y="446" width="190" height="26" rx="3" fill="#a8a8a8"/>
-    <rect x="505" y="186" width="190" height="286" rx="3" fill="#d77b34"/>
-    <rect x="760" y="152" width="190" height="320" rx="3" fill="#0a7d46"/>
+    <rect x="250" y="453" width="190" height="19" rx="3" fill="#a8a8a8"/>
+    <rect x="505" y="253" width="190" height="219" rx="3" fill="#d77b34"/>
+    <rect x="760" y="166" width="190" height="306" rx="3" fill="#0a7d46"/>
 
     <g font-size="34" font-weight="700" text-anchor="middle">
-      <text x="345" y="428" fill="#555">1.5%</text>
-      <text x="600" y="168" fill="#b45f20">16.8%</text>
-      <text x="855" y="134" fill="#08683b">18.8%</text>
+      <text x="345" y="435" fill="#555">1.4%</text>
+      <text x="600" y="235" fill="#b45f20">16.1%</text>
+      <text x="855" y="148" fill="#08683b">22.5%</text>
     </g>
     <g font-size="25" text-anchor="middle">
       <text x="345" y="518" font-weight="700">일반 연도</text>
@@ -42,6 +44,6 @@
       <text x="600" y="550">2009–2010</text>
       <text x="855" y="550">2020–2021</text>
     </g>
-    <text x="60" y="610" font-size="17" fill="#6b6b6b">행정안전부·e-나라지표 시도별 합계(시군구 포함) · 2005–2024년 증가율</text>
+    <text x="60" y="610" font-size="17" fill="#6b6b6b">행정안전부 지방재정365 광역단체 본청 · 2005–2024년 증가율</text>
   </g>
 </svg>

@@ -13,3 +13,9 @@ collections:
   previews:
     output: true
     permalink: /preview/:name/
+
+# 분석 원자료와 로컬 검증 산출물은 저장소에는 남기되 Pages 결과물에는 포함하지 않는다.
+exclude:
+  - analysis
+  - outputs
+  - node_modules
