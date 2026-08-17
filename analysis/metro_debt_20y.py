@@ -139,6 +139,95 @@ def ols_cluster(sample: list[dict], outcome: str = "growth_pct", year_fe: bool =
     }
 
 
+def crisis_design(
+    sample: list[dict],
+    outcome: str,
+    gfc_years: set[int],
+    trend: bool = True,
+) -> tuple[np.ndarray, np.ndarray, list[str]]:
+    """Design for comparing two common crises with the political-camp estimate.
+
+    Full year fixed effects cannot be included because the crisis indicators are
+    common to all cities in the same year. City fixed effects and a linear time
+    trend are therefore used to separate persistent place differences and the
+    long-run trend from the two crisis periods.
+    """
+    cities = sorted({r["city"] for r in sample})
+    names = ["intercept", "democratic", "gfc", "covid"]
+    names += [f"city:{c}" for c in cities[1:]]
+    if trend:
+        names.append("linear_trend")
+
+    matrix = []
+    response = []
+    for r in sample:
+        row = [
+            1.0,
+            1.0 if r["party"] == "d" else 0.0,
+            1.0 if r["year"] in gfc_years else 0.0,
+            1.0 if r["year"] in {2020, 2021} else 0.0,
+        ]
+        row += [1.0 if r["city"] == c else 0.0 for c in cities[1:]]
+        if trend:
+            row.append(float(r["year"] - 2014))
+        matrix.append(row)
+        response.append(r[outcome])
+    return np.asarray(matrix), np.asarray(response), names
+
+
+def crisis_model(
+    rows: list[dict],
+    attribution: str,
+    gfc_years: set[int],
+    outcome: str = "growth_pct",
+    trend: bool = True,
+) -> dict:
+    sample = select(rows, 2005, 2024, attribution, set())
+    x, y, names = crisis_design(sample, outcome, gfc_years, trend)
+    groups = [r["city"] for r in sample]
+    beta, se = fit_cluster_xy(x, y, groups)
+    estimates = {}
+    for name in ("democratic", "gfc", "covid"):
+        j = names.index(name)
+        estimate = float(beta[j])
+        std_error = float(se[j])
+        estimates[name] = {
+            "estimate": estimate,
+            "cluster_se": std_error,
+            "ci95_t6": [
+                estimate - T95_DF6 * std_error,
+                estimate + T95_DF6 * std_error,
+            ],
+        }
+    return {
+        "n": len(y),
+        "k": x.shape[1],
+        "attribution": attribution,
+        "gfc_years": sorted(gfc_years),
+        "covid_years": [2020, 2021],
+        "city_fe": True,
+        "linear_trend": trend,
+        "outcome": outcome,
+        "estimates": estimates,
+    }
+
+
+def crisis_period_means(rows: list[dict]) -> dict:
+    groups = {
+        "ordinary": [r for r in rows if r["year"] not in {2009, 2010, 2020, 2021}],
+        "gfc_2009_2010": [r for r in rows if r["year"] in {2009, 2010}],
+        "covid_2020_2021": [r for r in rows if r["year"] in {2020, 2021}],
+    }
+    return {
+        name: {
+            "n": len(sample),
+            "mean_growth_pct": float(np.mean([r["growth_pct"] for r in sample])),
+            "median_growth_pct": float(np.median([r["growth_pct"] for r in sample])),
+        }
+        for name, sample in groups.items()
+    }
+
+
 def fit_cluster_xy(x: np.ndarray, y: np.ndarray, group_labels: list[str]) -> tuple[np.ndarray, np.ndarray]:
     xtx_inv = np.linalg.pinv(x.T @ x)
     beta = xtx_inv @ x.T @ y
@@ -224,6 +313,16 @@ def main() -> None:
             "current": "채무가 변한 회계연도의 연말 단체장 계열에 귀속",
             "lagged": "전년도 연말 단체장 계열에 귀속(예산·집행 시차 민감도)",
             "ambiguous_exclusions": "부산 2020 권한대행, 대전 2005 임기 중 당적 변경은 해당 귀속에서 제외",
+            "gfc_main": "글로벌 금융위기 대응이 결산 채무에 집중적으로 나타난 2009~2010년",
+            "gfc_sensitivity": "충격 발생 연도까지 포함한 2008~2010년",
+            "covid": "코로나19 대응이 집중된 2020~2021년",
+        },
+        "crisis_comparison": {
+            "period_means": crisis_period_means(rows),
+            "main_current": crisis_model(rows, "current", {2009, 2010}),
+            "main_lagged": crisis_model(rows, "lagged", {2009, 2010}),
+            "gfc_2008_2010_current": crisis_model(rows, "current", {2008, 2009, 2010}),
+            "main_current_without_trend": crisis_model(rows, "current", {2009, 2010}, trend=False),
         },
         "analyses": {
             "full_current": result_block(rows, 2005, 2024, "current", set()),
